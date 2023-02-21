@@ -1,0 +1,6 @@
+# Instructions
+
+1. Open the folder app/Connection/config.php.
+2. Read the line 'dbname' and create a new database.
+3. Open the database folder and add tables from the tables.sql file to the database, and then insert the data, so open inserts.sql.
+4. Now you can turn on the page where you can log in as a user or customer with inserted data, where the password is "password" everywhere. Or you can register as a customer.

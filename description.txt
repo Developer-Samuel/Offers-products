@@ -1,0 +1,8 @@
+# Description
+
+1. The project allows you to log in as a user or customer.
+2. You can only register a customer who cannot have the same name as the user. Users are already added in the table.
+3. After logging in, the main page with all the offers will be displayed
+4. After the user logs in, it is possible to add an offer with products numbered from 1 to 5 for the given customer in the modal window.
+5. The user can edit, delete offers or products.
+6. The customer can only view offers with products.

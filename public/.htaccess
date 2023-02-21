@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9]+)/?$ index.php?action=$1 [L,QSA]
+RewriteRule ^my-offers/?$ index.php?action=my-offers [L,QSA]
+
+RewriteRule ^offer/([0-9]+)/?$ index.php?action=offer&id=$1 [L,QSA]
+RewriteRule ^offer-([a-zA-Z]+)/([0-9]+)/?$ index.php?action=offer-$1&id=$2 [L,QSA]
+RewriteRule ^product-(.*)/([0-9]+)/?$ index.php?action=product-$1&id=$2 [L,QSA]
+

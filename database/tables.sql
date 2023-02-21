@@ -1,0 +1,40 @@
+/* USERS */
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE users (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci;
+
+/* CUSTOMERS */
+DROP TABLE IF EXISTS `customers`;
+CREATE TABLE customers (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci;
+
+/* OFFERS */
+DROP TABLE IF EXISTS `offers`;
+CREATE TABLE offers (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) UNSIGNED,
+    offer_name VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+    customer_name VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+    validity_offer DATE NOT NULL,
+    note TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci;
+
+/* PRODUCTS */
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE products (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) UNSIGNED,
+    offer_id INT(11) UNSIGNED,
+    product_name VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+    count INT(11) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    discount INT(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci;
